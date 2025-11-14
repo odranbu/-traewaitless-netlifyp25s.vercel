@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Medical Services - Pharmacy, Hospital, and Veterinary">
+    <title>Medical Services</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .card-content {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .card-title {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .card-description {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Medical Services</h1>
+            <p class="subtitle">Quality Healthcare for Everyone</p>
+        </header>
+        
+        <main>
+            <div class="gallery">
+                <div class="card">
+                    <img src="/pharmacy.png" alt="Pharmacy Services" loading="lazy">
+                    <div class="card-content">
+                        <h2 class="card-title">Pharmacy</h2>
+                        <p class="card-description">Professional pharmaceutical services and medication guidance for your health needs.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="/spital.png" alt="Hospital Services" loading="lazy">
+                    <div class="card-content">
+                        <h2 class="card-title">Hospital</h2>
+                        <p class="card-description">Comprehensive medical care with state-of-the-art facilities and expert staff.</p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="/veterinary.png" alt="Veterinary Services" loading="lazy">
+                    <div class="card-content">
+                        <h2 class="card-title">Veterinary</h2>
+                        <p class="card-description">Compassionate veterinary care for your beloved pets and animals.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2024 Medical Services. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
