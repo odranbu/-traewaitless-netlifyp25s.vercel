@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TraeWaitless - Healthcare Booking</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .businesses {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .business-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .business-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .business-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .business-info {
+            padding: 1.5rem;
+        }
+        
+        .business-info h2 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.8rem;
+        }
+        
+        .business-info p {
+            color: #555;
+            margin-bottom: 1rem;
+        }
+        
+        .book-button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+        
+        .book-button:hover {
+            background-color: #2980b9;
+        }
+        
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TraeWaitless</h1>
+        <p>Book your healthcare appointments without the wait</p>
+    </header>
+    
+    <div class="container">
+        <div class="businesses">
+            <!-- Veterinary Business Section -->
+            <div class="business-card">
+                <img src="images/vet.jpg" alt="Veterinary or animal care" class="business-image">
+                <div class="business-info">
+                    <h2>Veterinary Clinic</h2>
+                    <p>Professional care for your beloved pets. Expert veterinarians ready to serve.</p>
+                    <button class="book-button">Book Appointment</button>
+                </div>
+            </div>
+            
+            <!-- Hospital Business Section -->
+            <div class="business-card">
+                <img src="images/hospital.jpg" alt="Hospital" class="business-image">
+                <div class="business-info">
+                    <h2>Medical Hospital</h2>
+                    <p>Comprehensive healthcare services with state-of-the-art facilities and experienced staff.</p>
+                    <button class="book-button">Book Appointment</button>
+                </div>
+            </div>
+            
+            <!-- Pharmacy Business Section -->
+            <div class="business-card">
+                <img src="images/pharmacy.jpg" alt="Pharmacy" class="business-image">
+                <div class="business-info">
+                    <h2>Community Pharmacy</h2>
+                    <p>Your trusted pharmacy for all prescription and over-the-counter medications.</p>
+                    <button class="book-button">Book Appointment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 TraeWaitless. All rights reserved.</p>
+    </footer>
+</body>
+</html>
