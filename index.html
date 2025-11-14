@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Business Directory - Find veterinary services, hospitals, and pharmacies">
+    <title>Business Directory</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        /* Hero Section */
+        .hero {
+            width: 100%;
+            height: 60vh;
+            min-height: 400px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.9;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: white;
+            z-index: 1;
+            padding: 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Business Directory Section */
+        .directory-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2d3748;
+            margin-bottom: 3rem;
+            font-weight: 700;
+        }
+
+        .business-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .business-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .business-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .business-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .business-content {
+            padding: 1.5rem;
+        }
+
+        .business-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 0.75rem;
+        }
+
+        .business-description {
+            color: #718096;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .business-tag {
+            display: inline-block;
+            background: #edf2f7;
+            color: #4a5568;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            margin-right: 0.5rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: #2d3748;
+            color: white;
+            padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .footer-logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer-text {
+            text-align: center;
+        }
+
+        .footer-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-text p {
+            color: #cbd5e0;
+            font-size: 0.95rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #4a5568;
+            color: #a0aec0;
+            font-size: 0.875rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .business-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .directory-section {
+                padding: 2rem 1rem;
+            }
+
+            .footer {
+                padding: 2rem 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                height: 50vh;
+                min-height: 300px;
+            }
+
+            .hero-content h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .business-name {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="hero.png" alt="Hero Image" class="hero-image">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>Welcome to Our Business Directory</h1>
+                <p>Discover trusted services in your community</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Directory Section -->
+    <section class="directory-section">
+        <h2 class="section-title">Business Directory</h2>
+        <div class="business-grid">
+            <!-- Veterinary Card -->
+            <article class="business-card">
+                <img src="veterinary.png" alt="Veterinary Services" class="business-image">
+                <div class="business-content">
+                    <h3 class="business-name">Veterinary Services</h3>
+                    <p class="business-description">
+                        Professional veterinary care for your beloved pets. Our experienced team provides comprehensive health services, emergency care, and preventive treatments to keep your animals healthy and happy.
+                    </p>
+                    <div>
+                        <span class="business-tag">Pet Care</span>
+                        <span class="business-tag">Emergency Services</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Hospital Card -->
+            <article class="business-card">
+                <img src="spital.png" alt="Hospital Services" class="business-image">
+                <div class="business-content">
+                    <h3 class="business-name">Hospital Services</h3>
+                    <p class="business-description">
+                        State-of-the-art medical facility offering comprehensive healthcare services. Our dedicated professionals provide quality treatment, advanced diagnostics, and compassionate care for all your health needs.
+                    </p>
+                    <div>
+                        <span class="business-tag">Healthcare</span>
+                        <span class="business-tag">24/7 Available</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Pharmacy Card -->
+            <article class="business-card">
+                <img src="pharmacy.png" alt="Pharmacy Services" class="business-image">
+                <div class="business-content">
+                    <h3 class="business-name">Pharmacy Services</h3>
+                    <p class="business-description">
+                        Your trusted neighborhood pharmacy providing prescription medications, over-the-counter products, and health consultations. We ensure safe, reliable, and convenient access to all your pharmaceutical needs.
+                    </p>
+                    <div>
+                        <span class="business-tag">Prescriptions</span>
+                        <span class="business-tag">Health Products</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <img src="veterinary.png" alt="Brand Logo" class="footer-logo">
+            <div class="footer-text">
+                <h3>Business Directory</h3>
+                <p>Your trusted source for local business services</p>
+                <p>Connecting communities with quality care providers</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Business Directory. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
