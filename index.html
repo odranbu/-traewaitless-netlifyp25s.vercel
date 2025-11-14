@@ -29,6 +29,19 @@
         header {
             text-align: center;
             color: white;
+            padding: 0;
+            position: relative;
+        }
+        
+        .hero-banner {
+            width: 100%;
+            height: auto;
+            display: block;
+            max-height: 600px;
+            object-fit: cover;
+        }
+        
+        .header-content {
             padding: 40px 20px 20px;
         }
         
@@ -165,26 +178,29 @@
 <body>
     <div class="container">
         <header>
-            <h1>WAITLESS</h1>
-            <p class="subtitle">Smart Queue Management for Every Business</p>
-            <p class="tagline">Eliminate waiting times, boost customer satisfaction, and increase revenue across 16 industries</p>
-            
-            <div class="stats">
-                <div class="stat">
-                    <div class="stat-number">16</div>
-                    <div class="stat-label">Business Solutions</div>
+            <img src="/hero.png" alt="WAITLESS - Smart Queue Management System" class="hero-banner">
+            <div class="header-content">
+                <h1>WAITLESS</h1>
+                <p class="subtitle">Smart Queue Management for Every Business</p>
+                <p class="tagline">Eliminate waiting times, boost customer satisfaction, and increase revenue across 16 industries</p>
+                
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-number">16</div>
+                        <div class="stat-label">Business Solutions</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">40%</div>
+                        <div class="stat-label">Revenue Boost</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Hours Saved Monthly</div>
+                    </div>
                 </div>
-                <div class="stat">
-                    <div class="stat-number">40%</div>
-                    <div class="stat-label">Revenue Boost</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">10+</div>
-                    <div class="stat-label">Hours Saved Monthly</div>
-                </div>
+                
+                <a href="#" class="cta">Start Your 5-Day Free Trial</a>
             </div>
-            
-            <a href="#" class="cta">Start Your 5-Day Free Trial</a>
         </header>
         
         <main>
